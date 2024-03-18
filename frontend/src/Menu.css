@@ -1,0 +1,91 @@
+#nav-container {
+  position: relative;
+  display: inline-block;
+  max-width: 50px;
+  max-height: 50px;
+  overflow: visible;
+  outline: none;
+}
+#nav-container.is-active #nav-toggle:before,
+#nav-container.is-active #nav-toggle:after {
+  box-shadow: none;
+}
+#nav-container.is-active #nav-toggle:before {
+  transform: rotate(-45deg);
+}
+#nav-container.is-active #nav-toggle:after {
+  transform: rotate(45deg);
+}
+#nav-container.is-active .nav-items {
+  transform: translate(0, 0);
+}
+#nav-container #nav-toggle {
+  position: relative;
+  width: 34px;
+  height: 17px;
+  margin: 10px;
+  z-index: 2;
+  margin-bottom: 9px;
+}
+#nav-container #nav-toggle:hover {
+  cursor: pointer;
+}
+#nav-container #nav-toggle:before,
+#nav-container #nav-toggle:after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#nav-container .nav-items {
+  position: absolute;
+  top: -6px;
+  left: -198px;
+  width: 285px;
+  height: auto;
+  z-index: 1;
+  padding: 40px 20px 20px 10px;
+  transition: transform 0.3s ease;
+  transform: translate(calc(-100% - 300px), 0);
+  /* background: #fff; */
+  /* display: grid; */
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); */
+}
+#nav-container .nav-items .nav-item {
+  background: transparent;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+#nav-container .nav-items .nav-item:hover {
+  cursor: pointer;
+  background: transparent;
+}
+/*-------------------my code-----------*/
+
+.idnamenamemobile {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #8e8e8e;
+  margin-top: 10px;
+}
+.navigationbuttontopmobile {
+  margin-top: 25px;
+}
+.navigatelinksmobile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
+  margin-left: 34px;
+  margin-top: 10px;
+}
+.navigatelinksmobile:hover {
+  cursor: pointer;
+}
